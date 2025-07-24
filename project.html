@@ -4,7 +4,7 @@
 <head>
 
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AJITH.R | Data Analyst Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet" />
@@ -16,7 +16,7 @@
         }
         
         .floating-btn {
-            @apply fixed bottom-6 right-6 bg-blue-700 text-white p-4 rounded-full shadow-xl hover: bg-blue-800 transition-transform transform hover: scale-110;
+            @apply fixed bottom-4 right-4 md: bottom-6 md: right-6 bg-blue-700 text-white p-4 rounded-full shadow-xl hover: bg-blue-800 transition-transform transform hover: scale-110;
         }
         
         section:target {
@@ -26,7 +26,7 @@
         .institution-logo-bar {
             position: fixed;
             top: 50%;
-            right: 0.5rem;
+            right: 0.25rem;
             transform: translateY(-50%);
             display: flex;
             flex-direction: column;
@@ -35,8 +35,12 @@
         }
         
         .institution-logo-bar img {
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
+            @media (min-width: 768px) {
+                width: 40px;
+                height: 40px;
+            }
             border-radius: 9999px;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease;
@@ -127,11 +131,11 @@
         <header>
 
             <!-- Blue Home Button with White Background -->
-            <div class="fixed top-4 left-4 z-50">
-                <a href="home.html" title="Home" class="group flex items-center space-x-2 text-1xl font-extrabold text-blue-800 bg-white px-5 py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300">
+            <div class="fixed top-2 left-2 md:top-4 md:left-4 z-50">
+                <a href="home.html" title="Home" class="group flex items-center space-x-1 md:space-x-2 text-xs md:text-sm lg:text-base font-extrabold text-blue-800 bg-white px-2 md:px-3 lg:px-5 py-1 md:py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300">
 
                     <!-- Blue Home SVG Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-800 group-hover:text-white transition duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 md:w-6 md:h-6 text-blue-800 group-hover:text-white transition duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
         d="M3 12l9-9 9 9M4 10v10a1 1 0 001 1h6m8-11v10a1 1 0 01-1 1h-6" />
     </svg>
@@ -144,12 +148,12 @@
 
 
             <!-- Eye-Catching Resume Download Button -->
-            <div class="fixed top-4 right-4 z-50">
+            <div class="fixed top-2 right-2 md:top-4 md:right-4 z-50">
                 <a href="https://onedrive.live.com/?cid=ccf41c87f4c9b722&id=CCF41C87F4C9B722!s5331e7f434b643e1a350fb3d09e279cc&resid=CCF41C87F4C9B722!s5331e7f434b643e1a350fb3d09e279cc&ithint=file,pdf&e=RVFZg3&migratedtospo=true&redeem=aHR0cHM6Ly8xZHJ2Lm1zL2IvYy9jY2Y0MWM4N2Y0YzliNzIyL0VmVG5NVk8yTk9GRG8xRDdQUW5pZWN3Qm1oaC05NVhZdGlTekNIeTBKQTAzc0E_ZT1SVkZaZzM"
-                    download title="Download Resume" class="flex items-center space-x-2 text-1xl font-extrabold text-blue-800 bg-white px-5 py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white animate-bounce hover:scale-105 transition duration-300">
+                    download title="Download Resume" class="flex items-center space-x-1 md:space-x-2 text-xs md:text-sm lg:text-base font-extrabold text-blue-800 bg-white px-2 md:px-3 lg:px-5 py-1 md:py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white animate-bounce hover:scale-105 transition duration-300">
 
                     <!-- SVG Download Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
         d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1M7 10l5 5 5-5M12 15V3" />
     </svg>
@@ -162,24 +166,24 @@
 
 
             <div class="container mx-auto px-0 py-2 text-center">
-                <h1 class="text-5xl font-extrabold text-blue-800">AJITH R | DATA ANALYST</h1>
-                <p class="text-xl text-gray-600 mt-2">
+                <h1 class="text-2xl md:text-3xl lg:text-5xl font-extrabold text-blue-800">AJITH R | DATA ANALYST</h1>
+                <p class="text-sm md:text-lg lg:text-xl text-gray-600 mt-2">
                     Unlocking data-driven insights with the power of Gen AI to shape smarter, faster decisions.
                 </p>
             </div>
 
-            <div class="container mx-auto px-6 py-4 mb-8 flex justify-center space-x-4">
+            <div class="container mx-auto px-2 md:px-6 py-4 mb-8 flex flex-wrap justify-center gap-2 md:gap-4">
 
-                <a href="home.html#skills" class="text-1xl  font-extrabold text-blue-800 bg-white px-5 py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300">
+                <a href="home.html#skills" class="text-xs md:text-sm lg:text-base font-extrabold text-blue-800 bg-white px-3 md:px-2 md:px-3 lg:px-5 py-1 md:py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300">
           Skills
         </a>
-                <a href="home.html#projects" class="text-1xl  font-extrabold text-blue-800 bg-white px-5 py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300 ">
+                <a href="home.html#projects" class="text-xs md:text-sm lg:text-base font-extrabold text-blue-800 bg-white px-3 md:px-2 md:px-3 lg:px-5 py-1 md:py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300 ">
           Projects &amp; Experience
         </a>
-                <a href="home.html#certifications" class="text-1xl font-extrabold text-blue-800 bg-white px-5 py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300">
+                <a href="home.html#certifications" class="text-1xl font-extrabold text-blue-800 bg-white px-2 md:px-3 lg:px-5 py-1 md:py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300">
           Certifications
         </a>
-                <a href="home.html#contact" class="text-1xl font-extrabold text-blue-800 bg-white px-5 py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300">
+                <a href="home.html#contact" class="text-1xl font-extrabold text-blue-800 bg-white px-2 md:px-3 lg:px-5 py-1 md:py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300">
           Reach out
         </a>
 
@@ -189,76 +193,76 @@
     </nav>
     <!-- Project 1 -->
     <!-- Remove the spacer div completely -->
-    <div id="projecterb" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6 mt-10">
-        <img src="https://tse2.mm.bing.net/th/id/OIP.1TvlFQnZQ0qD20nl04Be5gHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" class="absolute top-4 right-16 w-12 h-12" title="Excel" /><br>
+    <div id="projecterb" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-3 md:p-6 mt-6 md:mt-10">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.1TvlFQnZQ0qD20nl04Be5gHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" class="absolute top-2 right-8 md:top-4 md:right-16 w-8 h-8 md:w-12 md:h-12" title="Excel" /><br>
 
-        <p class="text-lg font-bold text-gray-800">Employee Reimbursement Dashboard</p>
-        <p class="text-sm text-gray-600 mt-1">
+        <p class="text-base md:text-lg font-bold text-gray-800">Employee Reimbursement Dashboard</p>
+        <p class="text-xs md:text-sm text-gray-600 mt-1">
             Designed an interactive Power BI dashboard for employee reimbursement tracking using Perplexity Labs.<br> Automated data cleansing and currency conversion to streamline reporting accuracy.<br> Integrated dynamic visuals and filters to reveal
             key spending and approval trends.<br> Enabled stakeholders to analyze transactions and optimize expense management decisions.
         </p>
 
 
         <div class="flex justify-end">
-            <a href="https://github.com/Ajith-data-analyst/Employee-Reimbursement-Dashboard" class="mt-3 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Project</a>
+            <a href="https://github.com/Ajith-data-analyst/Employee-Reimbursement-Dashboard" class="mt-3 bg-blue-600 text-white px-3 md:px-4 py-1 md:py-2 text-sm rounded hover:bg-blue-700">View Project</a>
         </div>
     </div>
     <!-- Section 1 -->
-    <section id="section1" class="py-10 px-6 bg-gradient-to-r from-blue-50 to-blue-100">
-        <h2 class="text-3xl font-bold text-center mb-6 text-blue-900">Microsoft Excel</h2>
+    <section id="section1" class="py-6 md:py-10 px-3 md:px-6 bg-gradient-to-r from-blue-50 to-blue-100">
+        <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6 text-blue-900">Microsoft Excel</h2>
 
         <!-- Project 1 -->
-        <div id="projectasr" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6 mt-10">
-            <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png" class="absolute top-4 right-16 w-12 h-12" title="Excel" /><br>
+        <div id="projectasr" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-3 md:p-6 mt-6 md:mt-10">
+            <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png" class="absolute top-2 right-8 md:top-4 md:right-16 w-8 h-8 md:w-12 md:h-12" title="Excel" /><br>
 
-            <p class="text-lg font-bold text-gray-800">AtliQ Sales Report</p>
-            <p class="text-sm text-gray-600 mt-1">
+            <p class="text-base md:text-lg font-bold text-gray-800">AtliQ Sales Report</p>
+            <p class="text-xs md:text-sm text-gray-600 mt-1">
                 Designed interactive sales performance dashboards using Power BI.<br> Leveraged Power Query, Pivot, and DAX for data modeling and KPIs.<br> Compared regional market performance against targets.<br> Delivered actionable insights to support
                 data-driven decision making.
             </p>
             <div class="flex justify-end">
-                <a href="https://github.com/Ajith-data-analyst/sales-analysis-AtliQ-hardware" class="mt-3 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Project</a>
+                <a href="https://github.com/Ajith-data-analyst/sales-analysis-AtliQ-hardware" class="mt-3 bg-blue-600 text-white px-3 md:px-4 py-1 md:py-2 text-sm rounded hover:bg-blue-700">View Project</a>
             </div>
         </div>
 
         <!-- Project 4 -->
-        <div id="projectafr" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6 mt-10">
-            <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png" class="absolute top-4 right-6 w-12 h-12" title="Excel" />
-            <p class="text-lg font-bold text-gray-800">AtliQ Finance Report</p>
-            <p class="text-sm text-gray-600 mt-1">
+        <div id="projectafr" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-3 md:p-6 mt-6 md:mt-10">
+            <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png" class="absolute top-2 right-3 md:top-4 md:right-6 w-8 h-8 md:w-12 md:h-12" title="Excel" />
+            <p class="text-base md:text-lg font-bold text-gray-800">AtliQ Finance Report</p>
+            <p class="text-xs md:text-sm text-gray-600 mt-1">
                 Created financial reports including Profit & Loss and variance analysis.<br> Demonstrated financial storytelling to improve strategic planning.<br> Streamlined Excel-based reporting processes with formulas and automation.<br> Communicated
                 key insights effectively to stakeholders.
             </p>
             <div class="flex justify-end">
-                <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/ElyWFhPKDLBDj2Cauy59a40BnSoRl-UBeToCJUieDkwPjg?e=5gWPQf" class="mt-3 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Project</a>
+                <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/ElyWFhPKDLBDj2Cauy59a40BnSoRl-UBeToCJUieDkwPjg?e=5gWPQf" class="mt-3 bg-blue-600 text-white px-3 md:px-4 py-1 md:py-2 text-sm rounded hover:bg-blue-700">View Project</a>
             </div>
         </div>
     </section>
     <!-- Project 2 -->
-    <div id="projectppm" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6 mt-10">
-        <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png" class="absolute top-4 right-6 w-12 h-12" title="Excel" />
-        <p class="text-lg font-bold text-gray-800">Project Priority Matrix</p>
-        <p class="text-sm text-gray-600 mt-1">
+    <div id="projectppm" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-3 md:p-6 mt-6 md:mt-10">
+        <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png" class="absolute top-2 right-3 md:top-4 md:right-6 w-8 h-8 md:w-12 md:h-12" title="Excel" />
+        <p class="text-base md:text-lg font-bold text-gray-800">Project Priority Matrix</p>
+        <p class="text-xs md:text-sm text-gray-600 mt-1">
             Helps evaluate and prioritize key initiatives using a structured scoring system.<br> Projects are scored on Feasibility (success likelihood), Impact (business value), and Size (effort needed).<br> Enables identification of high-impact, low-effort
             "quick wins" and high-risk, high-reward projects. with formulas and automation.<br> Used for strategic planning, resource allocation, and aligning projects with organizational goals.
         </p>
         <div class="flex justify-end">
-            <a href="https://github.com/Ajith-data-analyst/Project-Priority-Matrix" class="mt-3 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Project</a>
+            <a href="https://github.com/Ajith-data-analyst/Project-Priority-Matrix" class="mt-3 bg-blue-600 text-white px-3 md:px-4 py-1 md:py-2 text-sm rounded hover:bg-blue-700">View Project</a>
         </div>
     </div>
 
 
     <!-- Project 3 -->
-    <div id="projectspt" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6 mt-10">
-        <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png" class="absolute top-4 right-6 w-12 h-12" title="Excel" />
-        <p class="text-lg font-bold text-gray-800">Scenario Planning Tool</p>
-        <p class="text-sm text-gray-600 mt-1">
+    <div id="projectspt" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-3 md:p-6 mt-6 md:mt-10">
+        <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png" class="absolute top-2 right-3 md:top-4 md:right-6 w-8 h-8 md:w-12 md:h-12" title="Excel" />
+        <p class="text-base md:text-lg font-bold text-gray-800">Scenario Planning Tool</p>
+        <p class="text-xs md:text-sm text-gray-600 mt-1">
             Built an Excel-based Scenario Planning Tool for financial forecasting.<br> Analyzed Best, Realistic, and Worst Case scenarios for product sales performance.<br> Automated calculations for sales, discounts, COGS, and gross margin against targets.
             <br> Enabled data-driven decision-making by comparing profitability across scenarios.
         </p>
 
         <div class="flex justify-end">
-            <a href="https://github.com/Ajith-data-analyst/scenario-planning-tool" class="mt-3 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Project</a>
+            <a href="https://github.com/Ajith-data-analyst/scenario-planning-tool" class="mt-3 bg-blue-600 text-white px-3 md:px-4 py-1 md:py-2 text-sm rounded hover:bg-blue-700">View Project</a>
         </div>
     </div>
 
@@ -266,119 +270,119 @@
 
 
     <!-- Section 2 -->
-    <section id="section6" class="py-10 px-6 bg-gradient-to-r from-green-50 to-green-100">
-        <h2 class="text-3xl font-bold text-center mb-6 text-green-900">My SQL</h2>
+    <section id="section6" class="py-6 md:py-10 px-3 md:px-6 bg-gradient-to-r from-green-50 to-green-100">
+        <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6 text-green-900">My SQL</h2>
 
-        <div id="project4" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6 mt-10">
-            <img src="https://pngimg.com/uploads/mysql/mysql_PNG22.png" class="absolute top-4 right-6 w-12 h-12" title="SQL" />
-            <p class="text-lg font-bold text-gray-800">Finance & Top N Insights (SQL) <span class="text-sm text-yellow-500">(Ongoing)</span></p>
-            <p class="text-sm text-gray-600 mt-1">
+        <div id="project4" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-3 md:p-6 mt-6 md:mt-10">
+            <img src="https://pngimg.com/uploads/mysql/mysql_PNG22.png" class="absolute top-2 right-3 md:top-4 md:right-6 w-8 h-8 md:w-12 md:h-12" title="SQL" />
+            <p class="text-base md:text-lg font-bold text-gray-800">Finance & Top N Insights (SQL) <span class="text-sm text-yellow-500">(Ongoing)</span></p>
+            <p class="text-xs md:text-sm text-gray-600 mt-1">
                 Used advanced SQL to automate financial reporting in the CPG domain.<br> Built stored procedures, UDFs, and views for efficient data analysis.<br> Delivered key insights on top-performing segments and KPIs.<br> Strengthened SQL optimization
                 for large-scale reporting pipelines.
             </p>
             <div class="flex justify-end">
-                <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/EjTMVlKZtLtAtz58SbeJUIIB-k8SyufOczzMUDaHMEcbTA?e=eUOvdv" class="mt-3 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Project</a>
+                <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/EjTMVlKZtLtAtz58SbeJUIIB-k8SyufOczzMUDaHMEcbTA?e=eUOvdv" class="mt-3 bg-blue-600 text-white px-3 md:px-4 py-1 md:py-2 text-sm rounded hover:bg-blue-700">View Project</a>
             </div>
         </div>
 
         <!-- Project 6 -->
-        <div id="project5" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6 mt-10">
-            <img src="https://pngimg.com/uploads/mysql/mysql_PNG22.png" class="absolute top-4 right-6 w-12 h-12" title="SQL" />
-            <p class="text-lg font-bold text-gray-800">Supply Chain Analytics <span class="text-sm text-yellow-500">(Ongoing)</span></p>
-            <p class="text-sm text-gray-600 mt-1">
+        <div id="project5" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-3 md:p-6 mt-6 md:mt-10">
+            <img src="https://pngimg.com/uploads/mysql/mysql_PNG22.png" class="absolute top-2 right-3 md:top-4 md:right-6 w-8 h-8 md:w-12 md:h-12" title="SQL" />
+            <p class="text-base md:text-lg font-bold text-gray-800">Supply Chain Analytics <span class="text-sm text-yellow-500">(Ongoing)</span></p>
+            <p class="text-xs md:text-sm text-gray-600 mt-1">
                 Conducted error analysis for demand forecasting using SQL.<br> Created helper tables and optimized queries with triggers.<br> Evaluated supply chain KPIs like forecast accuracy and fulfillment rate.<br> Improved model performance through
                 calculated absolute error metrics.
             </p>
             <div class="flex justify-end">
-                <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/EnpfdVjrk-dCgyGXGJjor00B98pW4xUTnr8j9BHNRLcCVg?e=eU3GXm" class="mt-3 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Project</a>
+                <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/EnpfdVjrk-dCgyGXGJjor00B98pW4xUTnr8j9BHNRLcCVg?e=eU3GXm" class="mt-3 bg-blue-600 text-white px-3 md:px-4 py-1 md:py-2 text-sm rounded hover:bg-blue-700">View Project</a>
             </div>
         </div>
     </section>
 
     <!-- Section 3 -->
-    <section id="section3" class="py-10 px-6 bg-gradient-to-r from-yellow-50 to-yellow-100">
-        <h2 class="text-3xl font-bold text-center mb-6 text-yellow-900">Power BI</h2>
+    <section id="section3" class="py-6 md:py-10 px-3 md:px-6 bg-gradient-to-r from-yellow-50 to-yellow-100">
+        <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6 text-yellow-900">Power BI</h2>
 
         <!-- Project 3 -->
-        <div id="project3" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6 mt-10">
-            <img src="https://img.icons8.com/color/48/000000/power-bi.png" class="absolute top-4 right-6 w-12 h-12" title="Power BI" />
-            <p class="text-lg font-bold text-gray-800">Business Insights 360<span class="text-sm text-yellow-500">(Ongoing)</span></p>
-            <p class="text-sm text-gray-600 mt-1">
+        <div id="project3" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-3 md:p-6 mt-6 md:mt-10">
+            <img src="https://img.icons8.com/color/48/000000/power-bi.png" class="absolute top-2 right-3 md:top-4 md:right-6 w-8 h-8 md:w-12 md:h-12" title="Power BI" />
+            <p class="text-base md:text-lg font-bold text-gray-800">Business Insights 360<span class="text-sm text-yellow-500">(Ongoing)</span></p>
+            <p class="text-xs md:text-sm text-gray-600 mt-1">
                 Simulated real-world analytics project covering multiple business domains.<br> Built end-to-end dashboards in Power BI based on mock client requirements.<br> Practiced project environment setup, reporting, and delivery lifecycle.<br> Gained
                 exposure to stakeholder communication and agile workflows.
             </p>
             <div class="flex justify-end">
-                <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/ErJnUb6ei7JKuFG3cOFGLygBPTWVJB0ST2O2tLmyGtwWNw?e=WVmaOT" class="mt-3 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Project</a>
+                <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/ErJnUb6ei7JKuFG3cOFGLygBPTWVJB0ST2O2tLmyGtwWNw?e=WVmaOT" class="mt-3 bg-blue-600 text-white px-3 md:px-4 py-1 md:py-2 text-sm rounded hover:bg-blue-700">View Project</a>
             </div>
         </div>
 
         <!-- Project 8 -->
-        <div id="project8" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6 mt-10">
-            <img src="https://img.icons8.com/color/48/000000/power-bi.png" class="absolute top-4 right-6 w-12 h-12" title="Power BI" />
-            <p class="text-lg font-bold text-gray-800">Telecom KPI Analysis<span class="text-sm text-yellow-500">(Ongoing)</span></p>
-            <p class="text-sm text-gray-600 mt-1">
+        <div id="project8" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-3 md:p-6 mt-6 md:mt-10">
+            <img src="https://img.icons8.com/color/48/000000/power-bi.png" class="absolute top-2 right-3 md:top-4 md:right-6 w-8 h-8 md:w-12 md:h-12" title="Power BI" />
+            <p class="text-base md:text-lg font-bold text-gray-800">Telecom KPI Analysis<span class="text-sm text-yellow-500">(Ongoing)</span></p>
+            <p class="text-xs md:text-sm text-gray-600 mt-1">
                 Evaluated 5G launch impact for a telecom company (Wavecon).<br> Analyzed pre- and post-launch KPIs like ARPU, TAU, and churn rate.<br> Developed a structured KPI comparison dashboard.<br> Presented insights via a stakeholder-focused summary
                 on LinkedIn.
             </p>
             <div class="flex justify-end">
-                <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/EviUoCHtgMhJhaZGtK75PXEBh2y4OwfhJ7z-zu6_XfJ6KA?e=0WCJg6" class="mt-3 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Project</a>
+                <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/EviUoCHtgMhJhaZGtK75PXEBh2y4OwfhJ7z-zu6_XfJ6KA?e=0WCJg6" class="mt-3 bg-blue-600 text-white px-3 md:px-4 py-1 md:py-2 text-sm rounded hover:bg-blue-700">View Project</a>
             </div>
         </div>
 
         <!-- Project 9 -->
-        <div id="project9" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6 mt-10">
-            <img src="https://img.icons8.com/color/48/000000/power-bi.png" class="absolute top-4 right-6 w-12 h-12" title="Power BI" />
-            <p class="text-lg font-bold text-gray-800">Insurance Industry Dashboard<span class="text-sm text-yellow-500">(Ongoing)</span></p>
-            <p class="text-sm text-gray-600 mt-1">
+        <div id="project9" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-3 md:p-6 mt-6 md:mt-10">
+            <img src="https://img.icons8.com/color/48/000000/power-bi.png" class="absolute top-2 right-3 md:top-4 md:right-6 w-8 h-8 md:w-12 md:h-12" title="Power BI" />
+            <p class="text-base md:text-lg font-bold text-gray-800">Insurance Industry Dashboard<span class="text-sm text-yellow-500">(Ongoing)</span></p>
+            <p class="text-xs md:text-sm text-gray-600 mt-1">
                 Created a Power BI dashboard to analyze insurance industry metrics.<br> Utilized DAX and data modeling to visualize customer segments.<br> Focused on revenue trends, risk factors, and customer retention.<br> Delivered insights tailored
                 to underwriting and strategy teams.
             </p>
             <div class="flex justify-end">
-                <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/Ej_EZq-LX0BHqSZDuWsljkABOufirj_Y7LREOQBqBlE7-A?e=lyn63J" class="mt-3 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Project</a>
+                <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/Ej_EZq-LX0BHqSZDuWsljkABOufirj_Y7LREOQBqBlE7-A?e=lyn63J" class="mt-3 bg-blue-600 text-white px-3 md:px-4 py-1 md:py-2 text-sm rounded hover:bg-blue-700">View Project</a>
             </div>
         </div>
 
         <!-- Project 10 -->
-        <div id="project10" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6 mt-10">
-            <img src="" class="absolute top-4 right-16 w-12 h-12" title="Power BI" /> class="absolute top-4 right-6 w-6 h-6" title="Microsoft Fabric" />
-            <p class="text-lg font-bold text-gray-800">Microsoft Fabric Pilot Project<span class="text-sm text-yellow-500">(Ongoing)</span></p>
-            <p class="text-sm text-gray-600 mt-1">
+        <div id="project10" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-3 md:p-6 mt-6 md:mt-10">
+            <img src="" class="absolute top-2 right-8 md:top-4 md:right-16 w-8 h-8 md:w-12 md:h-12" title="Power BI" /> class="absolute top-4 right-6 w-4 h-4 md:w-6 md:h-6" title="Microsoft Fabric" />
+            <p class="text-base md:text-lg font-bold text-gray-800">Microsoft Fabric Pilot Project<span class="text-sm text-yellow-500">(Ongoing)</span></p>
+            <p class="text-xs md:text-sm text-gray-600 mt-1">
                 Migrated Power BI dashboards into the Microsoft Fabric ecosystem.<br> Utilized Dataflows, OneLake, and Pipelines for ETL orchestration.<br> Gained experience with Lakehouse architecture and Fabric features.<br> Built scalable data workflows
                 tailored for enterprise analytics.
             </p>
             <div class="flex justify-end">
-                <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/EoSbBaHVvUVKm7V3-JPrA8cBYTVXENb4TUgmN_4rAeqFhg?e=HQqccY" class="mt-3 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Project</a>
+                <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/EoSbBaHVvUVKm7V3-JPrA8cBYTVXENb4TUgmN_4rAeqFhg?e=HQqccY" class="mt-3 bg-blue-600 text-white px-3 md:px-4 py-1 md:py-2 text-sm rounded hover:bg-blue-700">View Project</a>
             </div>
         </div>
     </section>
 
     <!-- Section 4 -->
-    <section id="section4" class="py-10 px-6 bg-gradient-to-r from-purple-50 to-purple-100">
-        <h2 class="text-3xl font-bold text-center mb-6 text-purple-900">Python</h2>
+    <section id="section4" class="py-6 md:py-10 px-3 md:px-6 bg-gradient-to-r from-purple-50 to-purple-100">
+        <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6 text-purple-900">Python</h2>
 
         <!-- Project 6 -->
-        <div id="project6" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6 mt-10">
-            <img src="https://img.icons8.com/color/48/000000/python--v1.png" class="absolute top-4 right-6 w-12 h-12" title="Python" />
-            <p class="text-lg font-bold text-gray-800">Hospitality Data Analysis<span class="text-sm text-yellow-500">(Ongoing)</span></p>
-            <p class="text-sm text-gray-600 mt-1">
+        <div id="project6" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-3 md:p-6 mt-6 md:mt-10">
+            <img src="https://img.icons8.com/color/48/000000/python--v1.png" class="absolute top-2 right-3 md:top-4 md:right-6 w-8 h-8 md:w-12 md:h-12" title="Python" />
+            <p class="text-base md:text-lg font-bold text-gray-800">Hospitality Data Analysis<span class="text-sm text-yellow-500">(Ongoing)</span></p>
+            <p class="text-xs md:text-sm text-gray-600 mt-1">
                 Performed in-depth hotel industry analysis using Python and Pandas.<br> Conducted EDA, transformation, and visual storytelling for key trends.<br> Analyzed operational data to uncover insights on revenue and occupancy.<br> Applied statistical
                 methods to support data-driven recommendations.
             </p>
             <div class="flex justify-end">
-                <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/EuA94xjW3d1FrPfiGZmSUIgB38ZQ9TvdJgnpFGsmWEO3Dw?e=wo48wP" class="mt-3 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Project</a>
+                <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/EuA94xjW3d1FrPfiGZmSUIgB38ZQ9TvdJgnpFGsmWEO3Dw?e=wo48wP" class="mt-3 bg-blue-600 text-white px-3 md:px-4 py-1 md:py-2 text-sm rounded hover:bg-blue-700">View Project</a>
             </div>
         </div>
 
         <!-- Project 7 -->
-        <div id="project7" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6 mt-10">
-            <img src="https://bing.com/th/id/BCO.7cee4376-00d4-4e43-bd3d-797fc62c88c8.png" class="absolute top-4 right-24 w-12 h-12" title="Python" />
-            <p class="text-lg font-bold text-gray-800">Expense Tracking System<span class="text-sm text-yellow-500">(Ongoing)</span></p>
-            <p class="text-sm text-gray-600 mt-1">
+        <div id="project7" class="relative max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-3 md:p-6 mt-6 md:mt-10">
+            <img src="https://bing.com/th/id/BCO.7cee4376-00d4-4e43-bd3d-797fc62c88c8.png" class="absolute top-2 right-12 md:top-4 md:right-24 w-8 h-8 md:w-12 md:h-12" title="Python" />
+            <p class="text-base md:text-lg font-bold text-gray-800">Expense Tracking System<span class="text-sm text-yellow-500">(Ongoing)</span></p>
+            <p class="text-xs md:text-sm text-gray-600 mt-1">
                 Built a full-stack expense tracking app using Python, FastAPI & MySQL.<br> Developed a Streamlit-based UI for real-time data visualization.<br> Enabled users to categorize, filter, and monitor expenses efficiently.<br> Implemented analytics
                 on monthly and category-wise breakdowns.
             </p>
             <div class="flex justify-end">
-                <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/Ei5LYEGtXSlEtn8FuYPO1U0BvFGtY8KxfXSZulLk2HbvmQ?e=zllnLo" class="mt-3 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">View Project</a>
+                <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/Ei5LYEGtXSlEtn8FuYPO1U0BvFGtY8KxfXSZulLk2HbvmQ?e=zllnLo" class="mt-3 bg-blue-600 text-white px-3 md:px-4 py-1 md:py-2 text-sm rounded hover:bg-blue-700">View Project</a>
             </div>
         </div>
     </section>
@@ -406,7 +410,7 @@
     </div>
     </div>
     <!-- Scroll to Top Button -->
-    <a href="#" id="scrollTopBtn" class="floating-btn fixed bottom-6 right-6 bg-blue-700 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-800 transition duration-300 z-50 hidden">
+    <a href="#" id="scrollTopBtn" class="floating-btn fixed bottom-4 right-4 md:bottom-6 md:right-6 bg-blue-700 text-white px-3 py-1 md:px-4 md:py-2 text-sm rounded-full shadow-lg hover:bg-blue-800 transition duration-300 z-50 hidden">
     ↑ Top
   </a>
 
