@@ -129,69 +129,196 @@
     <!-- Header -->
     <nav class="bg-white shadow sticky top-0 z-50">
         <header>
+            <!-- Contact Dropdown Button (Hover or Click) -->
+            <div class="fixed top-2 left-2 md:top-4 md:left-4 z-50" x-data="{ open: false }">
+                <div class="relative" @mouseenter="open = true" @mouseleave="open = false">
+                    <!-- Button -->
+                    <button @click="open = !open" class="group flex items-center space-x-1 md:space-x-2 text-xs md:text-sm lg:text-base font-extrabold text-blue-800 bg-white px-2 md:px-3 lg:px-5 py-1 md:py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300">
+      <svg xmlns="http://www.w3.org/2000/svg"
+        class="w-4 h-4 md:w-6 md:h-6 text-blue-800 group-hover:text-white transition duration-300" fill="none"
+        viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M3 12l9-9 9 9M4 10v10a1 1 0 001 1h6m8-11v10a1 1 0 01-1 1h-6" />
+      </svg>
+      <span class="group-hover:text-white transition duration-300">Contact Me</span>
+    </button>
 
-            <!-- Blue Home Button with White Background -->
-            <div class="fixed top-2 left-2 md:top-4 md:left-4 z-50">
-                <a href="home.html" title="Home" class="group flex items-center space-x-1 md:space-x-2 text-xs md:text-sm lg:text-base font-extrabold text-blue-800 bg-white px-2 md:px-3 lg:px-5 py-1 md:py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300">
+                    <!-- Dropdown Menu -->
+                    <div x-show="open" x-cloak class="absolute mt-2 w-52 bg-white rounded-lg shadow-xl border border-gray-200 p-2 space-y-2 z-50" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95">
 
-                    <!-- Blue Home SVG Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 md:w-6 md:h-6 text-blue-800 group-hover:text-white transition duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-        d="M3 12l9-9 9 9M4 10v10a1 1 0 001 1h6m8-11v10a1 1 0 01-1 1h-6" />
-    </svg>
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/ajith-ramesh-data-analyst/" target="_blank" class="flex items-center space-x-2 hover:bg-gray-100 p-2 rounded">
+                            <img src="https://cdn-icons-png.flaticon.com/24/174/174857.png" alt="LinkedIn" />
+                            <span>LinkedIn</span>
+                        </a>
 
-                    <!-- Label -->
-                    <span class="group-hover:text-white transition duration-300">Home</span>
-                </a>
+                        <!-- Email -->
+                        <a href="mailto:ajithramesh20gmail.com" class="flex items-center space-x-2 hover:bg-gray-100 p-2 rounded">
+                            <img src="https://cdn-icons-png.flaticon.com/24/732/732200.png" alt="Email" />
+                            <span>Email</span>
+                        </a>
+
+
+
+                        <!-- GitHub -->
+                        <a href="https://github.com/Ajith-data-analyst" target="_blank" class="flex items-center space-x-2 hover:bg-gray-100 p-2 rounded">
+                            <img src="https://cdn-icons-png.flaticon.com/24/25/25231.png" alt="GitHub" />
+                            <span>GitHub</span>
+                        </a>
+
+                        <!-- Linktree -->
+                        <a href="https://linktr.ee/AJITH_DATA_ANALYST" target="_blank" class="flex items-center space-x-2 hover:bg-gray-100 p-2 rounded">
+                            <img src="https://i.pinimg.com/originals/53/d6/95/53d6953e8bbf6b0804b91eb3d7811d9a.png" alt="Linktree" width="20" />
+                            <span>Linktree</span>
+                        </a>
+
+                        <!-- Phone -->
+                        <a href="tel:+919345264522" class="flex items-center space-x-2 hover:bg-gray-100 p-2 rounded">
+                            <img src="https://cdn-icons-png.flaticon.com/24/724/724664.png" alt="Phone" />
+                            <span>Phone</span>
+                        </a>
+
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/9345264522" target="_blank" class="flex items-center space-x-2 hover:bg-gray-100 p-2 rounded">
+                            <img src="https://cdn-icons-png.flaticon.com/24/733/733585.png" alt="WhatsApp" />
+                            <span>WhatsApp</span>
+                        </a>
+
+                        <!-- Share Portfolio -->
+                        <button onclick="sharePortfolio()" class="flex items-center w-full space-x-2 hover:bg-gray-100 p-2 rounded text-left">
+        <img src="https://cdn-icons-png.flaticon.com/24/847/847969.png" alt="Share" />
+        <span>Share Portfolio</span>
+      </button>
+
+                    </div>
+                </div>
             </div>
 
+            <script>
+                function sharePortfolio() {
+                    const url = "https://ajith-data-analyst.github.io/Portfolio/home.html";
+                    const title = "My Portfolio";
+                    const text = "Check out my data portfolio!";
+
+                    if (navigator.share) {
+                        navigator.share({
+                                title,
+                                text,
+                                url
+                            })
+                            .then(() => console.log("Shared successfully"))
+                            .catch((err) => console.error("Share failed", err));
+                    } else {
+                        navigator.clipboard.writeText(url)
+                            .then(() => alert("Link copied to clipboard!"))
+                            .catch(() => alert("Could not copy link"));
+                    }
+                }
+            </script>
+
+            <!-- Load Alpine.js and x-cloak support -->
+
+            <head>
+                <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+                <style>
+                    [x-cloak] {
+                        display: none !important;
+                    }
+                </style>
+            </head>
+
+            <body>
+                <!-- Load Alpine.js and x-cloak support -->
+
+                <head>
+                    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+                    <style>
+                        [x-cloak] {
+                            display: none !important;
+                        }
+                    </style>
+                </head>
+
+                <body>
+                    <!-- Resume Dropdown Button -->
+                    <div class="fixed top-2 right-2 md:top-4 md:right-4 z-50" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+                        <!-- Button -->
+                        <button class="flex items-center space-x-1 md:space-x-2 text-xs md:text-sm lg:text-base font-extrabold text-blue-800 bg-white px-2 md:px-3 lg:px-5 py-1 md:py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white animate-bounce hover:scale-105 transition duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1M7 10l5 5 5-5M12 15V3" />
+            </svg>
+            <span>Resume</span>
+        </button>
+
+                        <!-- Dropdown - Only View and Share options -->
+                        <div x-show="open" x-transition.opacity.scale x-cloak class="absolute right-0 mt-2 w-40 bg-white border border-gray-300 rounded-lg shadow-lg py-1 z-50">
+                            <!-- View (opens in new tab) -->
+                            <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/EshYSDsouJNJgzfVEhhLsoABqOuQ4C5XQX-aeNIXdH7uFg?e=bJiBEd" target="_blank" rel="noopener noreferrer" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" title="View Resume in new tab">
+                View
+            </a>
+
+                            <!-- Share -->
+                            <button onclick="shareResume()" class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" title="Share Resume">
+                Share
+            </button>
+                        </div>
+                    </div>
+
+                    <!-- Resume Sharing Script -->
+                    <script>
+                        function shareResume() {
+                            const url = "https://1drv.ms/f/c/ccf41c87f4c9b722/EshYSDsouJNJgzfVEhhLsoABqOuQ4C5XQX-aeNIXdH7uFg?e=tNJs7e";
+                            const title = "Ajith R - Resume";
+
+                            if (navigator.share) {
+                                navigator.share({
+                                    title: title,
+                                    text: "Check out my resume",
+                                    url: url
+                                }).catch(console.error);
+                            } else {
+                                navigator.clipboard.writeText(url).then(() => {
+                                    alert("Resume link copied to clipboard!");
+                                }).catch(console.error);
+                            }
+                        }
+                    </script>
+                </body>
 
 
-            <!-- Eye-Catching Resume Download Button -->
-            <div class="fixed top-2 right-2 md:top-4 md:right-4 z-50">
-                <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/EshYSDsouJNJgzfVEhhLsoABqOuQ4C5XQX-aeNIXdH7uFg?e=tNJs7e" download title="Download Resume" class="flex items-center space-x-1 md:space-x-2 text-xs md:text-sm lg:text-base font-extrabold text-blue-800 bg-white px-2 md:px-3 lg:px-5 py-1 md:py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white animate-bounce hover:scale-105 transition duration-300">
 
-                    <!-- SVG Download Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-        d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1M7 10l5 5 5-5M12 15V3" />
-    </svg>
-
-                    <!-- Label -->
-                    <span>Resume</span>
-                </a>
-            </div>
-
-
-
-            <div class="container mx-auto px-0 py-2 text-center">
-                <a href="home.html" target="_blank" rel="noopener noreferrer">
-                    <h1 class="text-lg md:text-xl lg:text-2xl font-bold text-blue-800 hover:underline">
-                        AJITH R | DATA ANALYST
-                    </h1>
-                </a>
-                <p class="text-xs md:text-sm lg:text-base text-gray-600 mt-2">
-                    Unlocking data-driven insights with the power of Gen AI to shape smarter, faster decisions.
-                </p>
-            </div>
+                <div class="container mx-auto px-0 py-2 text-center">
+                    <a href="home.html" target="_blank" rel="noopener noreferrer">
+                        <h1 class="text-xl md:text-2xl lg:text-3xl font-bold text-blue-800 hover:underline">
+                            AJITH R
+                        </h1>
+                    </a>
+                    <p class="text-lg md:text-xl lg:text-2xl font-bold text-blue-800 mt-1">
+                        AI AUGUMENTED DATA ANALYST
+                    </p>
+                    <p class="text-xs md:text-sm lg:text-base text-gray-600 mt-2">
+                        Unlocking data-driven insights with the power of Gen AI to shape smarter, faster decisions.
+                    </p>
+                </div>
 
 
-            <div class="container mx-auto px-2 md:px-6 py-4 mb-8 flex flex-wrap justify-center gap-2 md:gap-4">
+                <div class="container mx-auto px-2 md:px-6 py-4 mb-8 flex flex-wrap justify-center gap-2 md:gap-4">
 
-                <a href="home.html#skills" class="text-xs md:text-sm lg:text-base font-extrabold text-blue-800 bg-white px-3 md:px-2 md:px-3 lg:px-5 py-1 md:py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300">
-          Skills
-        </a>
-                <a href="home.html#projects" class="text-xs md:text-sm lg:text-base font-extrabold text-blue-800 bg-white px-3 md:px-2 md:px-3 lg:px-5 py-1 md:py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300 ">
-          Projects &amp; Experience
-        </a>
-                <a href="home.html#certifications" class="text-1xl font-extrabold text-blue-800 bg-white px-2 md:px-3 lg:px-5 py-1 md:py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300">
-          Certifications
-        </a>
-                <a href="home.html#contact" class="text-1xl font-extrabold text-blue-800 bg-white px-2 md:px-3 lg:px-5 py-1 md:py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300">
-          Reach out
-        </a>
+                    <a href="home.html#skills" class="text-xs md:text-sm lg:text-base font-extrabold text-blue-800 bg-white px-3 md:px-2 md:px-3 lg:px-5 py-1 md:py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300">
+    Skills
+  </a>
 
-            </div>
+                    <a href="home.html#projects" class="text-xs md:text-sm lg:text-base font-extrabold text-blue-800 bg-white px-3 md:px-2 md:px-3 lg:px-5 py-1 md:py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300">
+    Projects &amp; Experience
+  </a>
+
+                    <a href="home.html#certifications" class="text-1xl font-extrabold text-blue-800 bg-white px-2 md:px-3 lg:px-5 py-1 md:py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300">
+    Certifications
+  </a>
+
+                </div>
 
         </header>
     </nav>
@@ -513,6 +640,6 @@
     <footer class="text-center py-6 bg-blue-800 text-white mt-10">
         <p>&copy; 2025 Ajith R. All Rights Reserved.</p>
     </footer>
-</body>
+    </body>
 
 </html>
