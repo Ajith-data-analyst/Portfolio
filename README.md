@@ -1,12 +1,14 @@
 # AJITH RAMESH
 
-**[Portfolio](https://ajith-data-analyst.github.io/Portfolio/home.html)** • .
+**[Portfolio](https://ajith-data-analyst.github.io/Portfolio/home.html)**  
+
 [Linktree](https://linktr.ee/AJITH_DATA_ANALYST) •  
 [LinkedIn](https://www.linkedin.com/in/ajith-ramesh-data-analyst/) •  
 [GitHub](https://github.com/Ajith-data-analyst) •  
 [Email](mailto:ajithramesh2020@gmail.com) •  
 [Mobile](tel:+919345264522) •  
 [WhatsApp](https://wa.me/9345264522)
+
 
 
 ---
