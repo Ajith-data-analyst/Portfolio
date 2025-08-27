@@ -1,6 +1,6 @@
 # AJITH RAMESH
 
-**[Portfolio](https://ajith-data-analyst.github.io/Portfolio/home.html)** • 
+**[Portfolio](https://ajith-data-analyst.github.io/Portfolio/home.html)** • .
 [Linktree](https://linktr.ee/AJITH_DATA_ANALYST) •  
 [LinkedIn](https://www.linkedin.com/in/ajith-ramesh-data-analyst/) •  
 [GitHub](https://github.com/Ajith-data-analyst) •  
