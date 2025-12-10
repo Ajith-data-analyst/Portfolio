@@ -141,51 +141,108 @@
                 </head>
 
                 <body>
-                    <!-- Resume Dropdown Button -->
-                    <div class="fixed top-2 right-2 md:top-4 md:right-4 z-50" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+                    <!-- Resume Button -->
+                    <div class="fixed top-2 right-2 md:top-4 md:right-4 z-50" x-data>
                         <!-- Button -->
-                        <button class="flex items-center space-x-1 md:space-x-2 text-xs md:text-sm lg:text-base font-extrabold text-blue-800 bg-white px-2 md:px-3 lg:px-5 py-1 md:py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white animate-bounce hover:scale-105 transition duration-300">
+                        <button id="resumeButton" class="flex items-center space-x-1 md:space-x-2 text-xs md:text-sm lg:text-base font-extrabold text-blue-800 bg-white px-2 md:px-3 lg:px-5 py-1 md:py-2 rounded-full shadow-md border border-blue-800 hover:bg-blue-800 hover:text-white animate-bounce hover:scale-105 transition duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1M7 10l5 5 5-5M12 15V3" />
+                    d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1M7 10l5 5 5-5M12 15V3" />
             </svg>
             <span>Resume</span>
         </button>
+                    </div>
 
-                        <!-- Dropdown - Only View and Share options -->
-                        <div x-show="open" x-transition.opacity.scale x-cloak class="absolute right-0 mt-2 w-40 bg-white border border-gray-300 rounded-lg shadow-lg py-1 z-50">
-                            <!-- View (opens in new tab) -->
-                            <a href="https://1drv.ms/f/c/ccf41c87f4c9b722/EshYSDsouJNJgzfVEhhLsoABqOuQ4C5XQX-aeNIXdH7uFg?e=bJiBEd" target="_blank" rel="noopener noreferrer" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" title="View Resume in new tab">
-                View
-            </a>
+                    <!-- Fullscreen PDF Viewer -->
+                    <div id="pdfModal" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50 p-2 sm:p-4">
+                        <div class="bg-white rounded-none sm:rounded-lg shadow-xl w-full h-full max-w-6xl max-h-[95vh] flex flex-col">
 
-                            <!-- Share -->
-                            <button onclick="shareResume()" class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" title="Share Resume">
-                Share
-            </button>
+                            <!-- Header -->
+                            <div class="flex items-center justify-between px-3 sm:px-4 py-2 border-b">
+                                <span id="pdfTitle" class="font-semibold text-sm md:text-base">Document Viewer</span>
+
+                                <div class="flex items-center gap-2">
+
+                                    <!-- SHARE BUTTON -->
+                                    <button id="pdfShare" class="text-[10px] sm:text-xs md:text-sm px-2 sm:px-3 py-1 border rounded hover:bg-gray-200">
+                        Share
+                    </button>
+
+                                    <!-- DOWNLOAD BUTTON -->
+                                    <a id="pdfDownload" download="Ajith_R_Resume.pdf" class="text-[10px] sm:text-xs md:text-sm px-2 sm:px-3 py-1 border rounded hover:bg-gray-200 cursor-pointer">
+                        Download
+                    </a>
+
+                                    <!-- CLOSE BUTTON -->
+                                    <button id="pdfClose" class="text-[10px] sm:text-xs md:text-sm px-2 sm:px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600">
+                        Close
+                    </button>
+                                </div>
+                            </div>
+
+                            <!-- PDF Viewer -->
+                            <div class="flex-1 overflow-hidden">
+                                <iframe id="pdfFrame" src="" class="w-full h-full min-h-[60vh] md:min-h-[70vh]" frameborder="0"></iframe>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Resume Sharing Script -->
+                    <!-- Script -->
                     <script>
-                        function shareResume() {
-                            const url = "https://1drv.ms/f/c/ccf41c87f4c9b722/EshYSDsouJNJgzfVEhhLsoABqOuQ4C5XQX-aeNIXdH7uFg?e=tNJs7e";
-                            const title = "Ajith R - Resume";
+                        const pdfModal = document.getElementById('pdfModal');
+                        const pdfFrame = document.getElementById('pdfFrame');
+                        const pdfClose = document.getElementById('pdfClose');
+                        const resumeButton = document.getElementById('resumeButton');
+                        const pdfDownload = document.getElementById('pdfDownload');
+                        const pdfShare = document.getElementById('pdfShare');
 
-                            if (navigator.share) {
-                                navigator.share({
-                                    title: title,
-                                    text: "Check out my resume",
-                                    url: url
-                                }).catch(console.error);
-                            } else {
-                                navigator.clipboard.writeText(url).then(() => {
-                                    alert("Resume link copied to clipboard!");
-                                }).catch(console.error);
+                        // Your resume PDF file
+                        const resumePdfUrl = "Ajith_R_Resume.pdf";
+
+                        function openPdfViewer() {
+                            if (!pdfModal.classList.contains('flex')) {
+                                pdfFrame.src = resumePdfUrl;
+                                pdfDownload.href = resumePdfUrl; // enable download
+                                pdfModal.classList.remove('hidden');
+                                pdfModal.classList.add('flex');
                             }
                         }
+
+                        function closePdfViewer() {
+                            pdfModal.classList.add('hidden');
+                            pdfModal.classList.remove('flex');
+                            pdfFrame.src = '';
+                        }
+
+                        // Open viewer when hovering Resume
+                        if (resumeButton) {
+                            resumeButton.addEventListener('mouseenter', openPdfViewer);
+                        }
+
+                        // Close PDF on close button
+                        pdfClose.addEventListener('click', closePdfViewer);
+
+                        // Close when clicking outside the viewer
+                        pdfModal.addEventListener('click', function(e) {
+                            if (e.target === pdfModal) closePdfViewer();
+                        });
+
+                        // SHARE RESUME
+                        pdfShare.addEventListener('click', function() {
+                            if (navigator.share) {
+                                navigator.share({
+                                    title: "Ajith R – Resume",
+                                    text: "Check out my resume",
+                                    url: resumePdfUrl
+                                }).catch(console.error);
+                            } else {
+                                navigator.clipboard.writeText(resumePdfUrl);
+                                alert("Link copied to clipboard!");
+                            }
+                        });
                     </script>
                 </body>
+
 
 
 
@@ -237,8 +294,8 @@
                 <p class="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600">Higher Secondary - Computer Science</p>
                 <p class="text-xs sm:text-sm text-gray-500 mt-1">Completed 12th grade with focus on Computer Science and Mathematics.</p>
                 <p class="text-sm font-semibold mt-2">Percentage: 73.33%</p>
-                <a href="" class="mt-2 md:mt-3 inline-block bg-blue-600 text-white px-2 sm:px-3 md:px-4 py-1 md:py-2 text-xs sm:text-sm rounded hover:bg-blue-700">View 12th grade Certificate</a>
-                <a href="" class=" mt-2 md:mt-3 inline-block bg-blue-600 text-white px-2 sm:px-3 md:px-4 py-1 md:py-2 text-xs sm:text-sm rounded hover:bg-blue-700 ">View All Certificate</a>
+                <a href="" data-pdf="12 f_merged.pdf" class="mt-2 md:mt-3 inline-block bg-blue-600 text-white px-2 sm:px-3 md:px-4 py-1 md:py-2 text-xs sm:text-sm rounded hover:bg-blue-700">View 12th grade Certificate</a>
+                <a href="" data-pdf="12 f_merged_merged.pdf" class=" mt-2 md:mt-3 inline-block bg-blue-600 text-white px-2 sm:px-3 md:px-4 py-1 md:py-2 text-xs sm:text-sm rounded hover:bg-blue-700 ">View All Certificate</a>
             </div>
         </div>
     </section>
@@ -259,8 +316,8 @@
                 <p class="text-xs sm:text-sm text-gray-500 mt-1 ">3-year undergraduate course focusing on Artificial-Intelligence and data systems.</p>
                 <p class="text-sm font-semibold mt-2 ">CGPA : 7.06</p>
                 <p class="text-sm font-semibold mt-2 ">Ongoing</p>
-                <a href="" class="mt-2 md:mt-3 inline-block bg-blue-600 text-white px-2 sm:px-3 md:px-4 py-1 md:py-2 text-xs sm:text-sm rounded hover:bg-blue-700 ">View Graduation Certificate</a>
-                <a href="" class="mt-2 md:mt-3 inline-block bg-blue-600 text-white px-2 sm:px-3 md:px-4 py-1 md:py-2 text-xs sm:text-sm rounded hover:bg-blue-700 ">View All Certificate</a>
+
+                <a href="" data-pdf="sist_all.pdf" class="mt-2 md:mt-3 inline-block bg-blue-600 text-white px-2 sm:px-3 md:px-4 py-1 md:py-2 text-xs sm:text-sm rounded hover:bg-blue-700 ">View All Certificate</a>
             </div>
         </div>
     </section>
@@ -280,9 +337,9 @@
                 </a>
 
                 <p class="text-xs sm:text-sm text-gray-500 mt-1 ">Completed the Data Analysis Boot Camp with hands-on Real Time projects.</p>
-                <p class="text-sm font-semibold mt-2 ">Completed</p>
-                <a href="https://www.linkedin.com/in/ajith-ramesh-data-analyst/details/certifications/ " class="mt-2 md:mt-3 inline-block bg-blue-600 text-white px-2 sm:px-3 md:px-4 py-1 md:py-2 text-xs sm:text-sm rounded hover:bg-blue-700 ">View completion Certificate</a>
-                <a href="https://www.linkedin.com/in/ajith-ramesh-data-analyst/details/certifications/ " class="mt-2 md:mt-3 inline-block bg-blue-600 text-white px-2 sm:px-3 md:px-4 py-1 md:py-2 text-xs sm:text-sm rounded hover:bg-blue-700 ">View All Certificate</a>
+                <p class="text-sm font-semibold mt-2 ">On-going</p>
+
+                <a href="https://www.linkedin.com/in/ajith-ramesh-data-analyst/details/certifications/ " data-pdf="CODE_ALL.PDF" class="mt-2 md:mt-3 inline-block bg-blue-600 text-white px-2 sm:px-3 md:px-4 py-1 md:py-2 text-xs sm:text-sm rounded hover:bg-blue-700 ">View All Certificate</a>
             </div>
         </div>
     </section>
@@ -303,10 +360,112 @@
 
                 <p class="text-xs sm:text-sm text-gray-500 mt-1 ">Learned professional communication, presentation skills, and group discussions.</p>
                 <p class="text-sm font-semibold mt-2 ">Completed</p>
-                <a href="" class="mt-2 md:mt-3 inline-block bg-blue-600 text-white px-2 sm:px-3 md:px-4 py-1 md:py-2 text-xs sm:text-sm rounded hover:bg blue-700 ">View Certificate</a>
+                <a href="" data-pdf="ANGLO.pdf" class="mt-2 md:mt-3 inline-block bg-blue-600 text-white px-2 sm:px-3 md:px-4 py-1 md:py-2 text-xs sm:text-sm rounded hover:bg blue-700 ">View Certificate</a>
             </div>
         </div>
     </section>
+
+    <!-- PDF Viewer Modal -->
+    <div id="pdfModal" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50 p-2 sm:p-4">
+        <div class="bg-white rounded-none sm:rounded-lg shadow-xl w-full h-full max-w-6xl max-h-[95vh] flex flex-col">
+            <div class="flex items-center justify-between px-3 sm:px-4 py-2 border-b">
+                <div class="flex items-center gap-3">
+                    <span id="pdfTitle" class="font-semibold text-sm md:text-base">Document Viewer</span>
+                </div>
+                <div class="flex items-center gap-2 flex-wrap justify-end">
+                    <button id="pdfShare" type="button" class="text-[10px] sm:text-xs md:text-sm px-2 sm:px-3 py-1 border rounded hover:bg-gray-100">Share</button>
+                    <a id="pdfDownloadFile" href="#" download class="text-[10px] sm:text-xs md:text-sm px-2 sm:px-3 py-1 border rounded hover:bg-gray-100">Download</a>
+                    <a id="pdfDownload" href="#" target="_blank" class="text-[10px] sm:text-xs md:text-sm px-2 sm:px-3 py-1 border rounded hover:bg-gray-100">Open in new tab</a>
+                    <button id="pdfClose" type="button" class="text-[10px] sm:text-xs md:text-sm px-2 sm:px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600">Close</button>
+                </div>
+            </div>
+            <div class="flex-1 overflow-hidden">
+                <iframe id="pdfFrame" src="" class="w-full h-full min-h-[60vh] md:min-h-[70vh]" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const pdfModal = document.getElementById('pdfModal');
+            const pdfFrame = document.getElementById('pdfFrame');
+            const pdfDownload = document.getElementById('pdfDownload');
+            const pdfDownloadFile = document.getElementById('pdfDownloadFile');
+            const pdfTitle = document.getElementById('pdfTitle');
+            const pdfClose = document.getElementById('pdfClose');
+            const pdfShare = document.getElementById('pdfShare');
+
+            let pdfCurrentUrl = '';
+
+            function openPdfViewer(url, title) {
+                if (!url) return;
+                pdfCurrentUrl = url;
+                pdfFrame.src = url;
+                pdfDownload.href = url;
+                pdfDownloadFile.href = url;
+                pdfTitle.textContent = title || 'Document Viewer';
+                pdfModal.classList.remove('hidden');
+                pdfModal.classList.add('flex');
+            }
+
+            function closePdfViewer() {
+                pdfModal.classList.add('hidden');
+                pdfModal.classList.remove('flex');
+                pdfFrame.src = '';
+                pdfCurrentUrl = '';
+            }
+
+            pdfClose.addEventListener('click', closePdfViewer);
+
+            pdfModal.addEventListener('click', function(e) {
+                if (e.target === pdfModal) {
+                    closePdfViewer();
+                }
+            });
+
+            if (pdfShare) {
+                pdfShare.addEventListener('click', function() {
+                    if (!pdfCurrentUrl) return;
+                    const shareData = {
+                        title: pdfTitle.textContent || 'Document',
+                        text: 'Sharing a document link',
+                        url: pdfCurrentUrl
+                    };
+
+                    if (navigator.share) {
+                        navigator.share(shareData).catch(function() {
+                            // Ignore errors from user cancelling share
+                        });
+                    } else if (navigator.clipboard && navigator.clipboard.writeText) {
+                        navigator.clipboard.writeText(pdfCurrentUrl)
+                            .then(function() {
+                                alert('Link copied to clipboard!');
+                            })
+                            .catch(function() {
+                                alert('Share not supported. Copy this link: ' + pdfCurrentUrl);
+                            });
+                    } else {
+                        alert('Share not supported. Copy this link: ' + pdfCurrentUrl);
+                    }
+                });
+            }
+
+            const links = document.querySelectorAll('a');
+
+            links.forEach(function(link) {
+                const text = (link.textContent || '').trim().toLowerCase();
+                const pdfUrl = link.getAttribute('data-pdf');
+
+                if (text.startsWith('view') && pdfUrl) {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        openPdfViewer(pdfUrl, link.textContent.trim());
+                    });
+                }
+            });
+        });
+    </script>
+
 
     <!-- Section 5 -->
     <section id="section5" class="py-4 sm:py-6 md:py-10 px-2 sm:px-3 md:px-6 bg-gradient-to-r from-purple-50 to-purple-100 ">
@@ -325,65 +484,14 @@
 
                 <p class="text-xs sm:text-sm text-gray-500 mt-1 ">ChatGPT Advanced Data Analysis boosts productivity and creativity by automating tasks like extracting and visualizing data from PDFs and Excel, creating presentations and quizzes, generating marketing content, and editing media files efficiently.</p>
                 <p class="text-sm font-semibold mt-2 ">On-going</p>
-                <a href="https://www.linkedin.com/in/ajith-ramesh-data-analyst/details/certifications/ " class="mt-2 md:mt-3 inline-block bg-blue-600 text-white px-2 sm:px-3 md:px-4 py-1 md:py-2 text-xs sm:text-sm rounded hover:bg blue-700 ">View Certificate</a>
+                <a href="https://www.coursera.org/account/accomplishments/specialization/N6BHPY5F8ZWT" class="mt-2 md:mt-3 inline-block bg-blue-600 text-white px-2 sm:px-3 md:px-4 py-1 md:py-2 text-xs sm:text-sm rounded hover:bg blue-700 ">View Certificate</a>
             </div>
         </div>
     </section>
 
 
 
-    <!-- Floating Button -->
-    <a href="# " id="scrollTopBtn " class="floating-btn fixed bottom-6 right-6 bg-blue-700 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-800 transition duration-300 z-50 hidden ">
-  ↑ Top
-</a>
 
-    <!-- JavaScript -->
-    <script>
-        const scrollTopBtn = document.getElementById('scrollTopBtn');
-
-        // Smooth scroll to top
-        scrollTopBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-
-            // For accessibility
-            document.body.focus();
-        });
-
-        // Show/hide button based on scroll position
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollTopBtn.classList.remove('hidden');
-                scrollTopBtn.classList.add('flex');
-            } else {
-                scrollTopBtn.classList.remove('flex');
-                scrollTopBtn.classList.add('hidden');
-            }
-        });
-
-        // Initially hide
-        scrollTopBtn.classList.add('hidden');
-    </script>
-    <script>
-        document.querySelectorAll('.scroll-to-middle').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const target = document.getElementById(targetId);
-                if (target) {
-                    const rect = target.getBoundingClientRect();
-                    const offset = rect.top + window.pageYOffset - (window.innerHeight / 2) + (rect.height / 2);
-                    window.scrollTo({
-                        top: offset,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
 
     <!-- Footer -->
     <!-- Footer -->
