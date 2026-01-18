@@ -1,88 +1,180 @@
-# AJITH RAMESH
+# **AJITH RAMESH**
+### *Data Alchemist • Insight Architect • BI Visionary* 
+**Data Analyst | Turning information into decisions that matter | AI Prompting**
 
-**[Portfolio](https://ajith-data-analyst.github.io/Portfolio/home.html)**  
 
-[Linktree](https://linktr.ee/AJITH_DATA_ANALYST) •  
-[LinkedIn](https://www.linkedin.com/in/ajith-ramesh-data-analyst/) •  
-[GitHub](https://github.com/Ajith-data-analyst) •  
-[Email](mailto:ajithramesh2020@gmail.com) •  
-[Mobile](tel:+919345264522) •  
-[WhatsApp](https://wa.me/9345264522)
+<p align="left">
+ <!-- Contact & Immediate Reach -->
+<a href="mailto:ajithramesh2020@gmail.com">
+  <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
+</a>
 
+<a href="tel:+919345264522">
+  <img src="https://img.shields.io/badge/Call%20Me-0A66C2?style=for-the-badge&logo=phone&logoColor=white"/>
+</a>
+
+<a href="https://wa.me/9345264522">
+  <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/>
+</a>
+
+<!-- Professional Identity -->
+<a href="https://www.linkedin.com/in/ajith-ramesh-data-analyst/">
+  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
+
+<a href="https://ajith-data-analyst.github.io/Portfolio/Ajith_R_Resume.pdf">
+  <img src="https://img.shields.io/badge/Resume-4CAF50?style=for-the-badge&logo=googledrive&logoColor=white"/>
+</a>
+
+<!-- Work Proof -->
+<a href="https://ajith-data-analyst.github.io/Portfolio/home.html">
+  <img src="https://img.shields.io/badge/Portfolio-FF6B6B?style=for-the-badge&logo=web&logoColor=white"/>
+</a>
+
+<a href="https://github.com/Ajith-data-analyst">
+  <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+</p>
+
+---
+
+
+
+## ⚡ **Data Stack Mastery**
+
+### **🎛️ Business Intelligence**
+![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![DAX](https://img.shields.io/badge/DAX-FF6B35?style=for-the-badge&logo=powerbi&logoColor=white)
+![Power Query](https://img.shields.io/badge/Power_Query-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)
+![Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)
+
+### **🐍 Python Ecosystem**
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+
+### **🗄️ Database & SQL**
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
 
 ---
 
-## 🧠 AI AUGMENTED DATA ANALYST
+## 🏆 **Signature Projects**
+
+|           🔹           | **📊 Business Insights 360**<br><sub><i>Enterprise BI Dashboard</i></sub>                                                                                                                                                                                                                                                                                                                                                                                                                                   | **Expense Analyzer**                                                                                                                                                                                                                                                                                      | **🌐 Crypto view**<br><sub><i>Real-Time INR Market Analytics</i></sub>                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| :--------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|    🧰 **Tech Stack**   | <br>**Power BI • DAX • Power Query • SQL**<br><br>                                                                                                                                                                                                                                                                                                                                                                                                                                                          | <br>**Python • FastAPI • Streamlit • Plotly • Machine Learning**<br><br>                                                                                                                                                                                                                                  | <br>**JavaScript • WebSockets • API • Data Visualization**<br><br>                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+|     📝 **Overview**    | Transformative enterprise dashboard delivering cross-functional business intelligence with real-time KPI tracking and strategic insights.                                                                                                                                                                                                                                                                                                                                                                   | Intelligent expense tracking web application with ML-powered anomaly detection and real-time budget insights.                                                                                                                                                                                             | Live cryptocurrency analytics platform with real-time volatility metrics, risk scoring, and automated reporting.                                                                                                                                                                                                                                                                                                                                                                                      |
+|    🔗 **Repository**   | <br>[![View Repository](https://img.shields.io/badge/VIEW_REPOSITORY-181717?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/Ajith-data-analyst/Business-Insights-360/blob/main/README.md)<br><br>                                                                                                                                                                                                                                                                                    | <br>[![View Repository](https://img.shields.io/badge/VIEW_REPOSITORY-181717?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/Ajith-data-analyst/expense-tracker/blob/main/README.md)<br><br>                                                                                        | <br>[![View Repository](https://img.shields.io/badge/VIEW_REPOSITORY-181717?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/Ajith-data-analyst/crypto_view/blob/main/README.md)<br><br>                                                                                                                                                                                                                                                                                        |
+| ⭐ **Key Capabilities** | 📈 **Multi-dimensional analysis** across finance, sales, marketing, supply chain<br><br>🎯 **Real-time KPI tracking**: Net sales, gross margin, forecast accuracy, market share<br><br>🌍 **Geospatial visualization** with drill-down capabilities by region<br><br>🔄 **Automated ETL pipelines** with Power Query for seamless data refresh<br><br>📊 **Executive dashboard** with variance, benchmark, and trend analysis<br><br>🎨 **Interactive filtering** by customer, product, and time dimensions | 🔔 **Automated alert system** for budget breaches and savings goals<br><br>📅 **Time-series forecasting** using Prophet for expense predictions<br><br>📤 **Multi-format export** (PDF, Excel, JSON) for record keeping<br><br>⚙️ **Strict schema validation** and automated backups for data reliability | 🔴 **Real-time WebSocket connections** to multiple cryptocurrency exchanges<br><br>📊 **Advanced volatility metrics** including GARCH models and Bollinger Bands<br><br>🚨 **Proprietary risk scoring algorithm** with configurable alert triggers<br><br>📑 **Automated PDF/JSON report generation** with jsPDF integration<br><br>📈 **Interactive candlestick charts** with technical indicators overlay<br><br>💾 **Snapshot-based analytical framework** for reproducible time-specific analysis |
+
 
 ---
 
-## 📌 Summary
+## 🎓 **Education & Credentials**
 
-- Data Analyst with hands-on experience in transforming complex datasets into actionable business insights.  
-- Proficient in **Excel, SQL, Tableau, Power BI**, and **Python**.  
-- Skilled in **sales forecasting, financial reporting, performance benchmarking**, and **KPI tracking**.  
-- Proven ability to execute end-to-end analytics projects that support data-driven decision-making.
-
----
-
-## 💼 Project Experience
-
-### 🔹 [Employee Reimbursement Dashboard](https://github.com/Ajith-data-analyst/Employee-Reimbursement-Dashboard)  
-**Generated by:** Perplexity Labs | **July 2025**  
-🔗 [Live Dashboard](https://ajith-data-analyst.github.io/Employee-Reimbursement-Dashboard/index.html)  
-- Built interactive Power BI dashboard with automated cleansing, INR conversion, DAX KPIs.  
-- Streamlined ETL using Power Query; standardized data and multi-currency values.  
-- Designed KPI cards, slicers, and drill-downs for key spend insights.  
-- Delivered an executive-ready BI tool, reducing reporting effort by 75%.  
-- Leveraged prompt engineering + DAX for real-time, AI-powered insights.
+| **Degree/Certification**                                                                                                                      | **Institution**                                                                   | **Status**           | **Grade**          |
+| --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | -------------------- | ------------------ |
+| **[B.Sc Computer Science with Artificial Intelligence](https://www.sathyabama.ac.in/taxonomy/term/90)** | **[Sathyabama Institute of Science & Technology](https://www.sathyabama.ac.in/)** | *Expected May 2026*  | **67.40%**  |
+| **[Gen AI Data Analyst Specialization](https://www.coursera.org/specializations/generative-ai-data-analyst)**                                                                           | **[Coursera](https://www.coursera.org/)**                                         | *Completed*          | **Specialization** |
+| **[Data Analytics Bootcamp](https://codebasics.io/bootcamps/data-analytics-bootcamp)**                                                        | **[Codebasics](https://codebasics.io/)**                                          | *Completed*          | **Certified**      |
+| **Higher Secondary Education**                                                                         | **[Zion Matriculation Higher Secondary School](https://zionschool.ac.in/)**       | *Graduated May 2023* | **73.33%**         |
 
 ---
 
-### 🔹 [Financial Performance Analysis](https://github.com/Ajith-data-analyst/AtliQ-Hardware-Financial-Analysis)  
-**Company:** [AtliQ Technologies](https://www.atliq.com/) | **July 2024**  
-- Variance analysis of P&L identifying 15% cost-saving opportunities.  
-- Created predictive profitability models using regression.  
-- Built Tableau dashboards for EBITDA, ROI, and other KPIs.  
-- Automated reporting using Power Query (25+ hrs/month saved).  
-- Root cause analysis improved forecast accuracy by 12%.
+## 🏅 **Data Philosophy**
+
+> *"Data without insight is noise. Insight without action is wasted potential. I bridge the gap between raw numbers and strategic decisions, building scalable intelligence systems that drive measurable business outcomes."*
+
+**My Core Principles:**
+1. 🔍 **Depth Over Breadth** - Mastery of select tools over superficial knowledge
+2. ⚡ **Automation First** - Eliminate manual processes through intelligent scripting
+3. 📊 **Storytelling Through Data** - Transform metrics into compelling narratives
+4. 🎯 **Business Impact Focus** - Every analysis must answer "So what?"
+5. 🔄 **Continuous Learning** - Daily upskilling in emerging data technologies
 
 ---
 
-### 🔹 [Scenario Planning Tool](https://github.com/Ajith-data-analyst/scenario-planning-tool)  
-- Developed financial scenario models using sensitivity analysis.  
-- Simulated margin upside worth $278K+.  
-- Automated forecasting reduced cycle time by 40%.  
-- Performed break-even analysis for GM targets.  
-- Built comparative dashboards to support discount strategy.
+## 📌 **Currently Exploring**
+
+- 🧠 **LLM Integration** for automated insight generation
+- 🏗️ **MLOps pipelines** for production-ready models
+- 📱 **Mobile BI applications** with React Native
+- 🔐 **Blockchain analytics** for DeFi projects
+- 🤖 **AutoML platforms** for rapid prototyping
 
 ---
 
-## 🎓 Education
-
-### 🎓 [Sathyabama Institute of Science and Technology](https://www.sathyabama.ac.in/)  
-**Bachelor of Computer Science – Specialization: Artificial Intelligence**  
-📍 Chennai | 🎓 *Expected May 2026* | 📊 CGPA: 7.13 / 10.00
-
-### 🎓 [Zion Matriculation Higher Secondary School](https://zionschoolsembakkam.com/)  
-📍 Chennai | 🎓 *Graduated May 2023* | 📊 GPA: 73.33 / 100.00
-
----
-
-## 🛠 Technical Skills
-
-- AI Prompting  
-- Microsoft Excel (ETL, Pivot Tables)  
-- Power BI (Analysis & Visualization)  
-- Financial Reporting  
-- DAX  
-- Dashboard Design  
+<div align="center">
+  
+  **"In God we trust. All others must bring data."** - *W. Edwards Deming*
+  
+  <br/>
+  
+  ![Visitor Count](https://komarev.com/ghpvc/?username=YOUR_USERNAME&color=blue&style=flat-square)
+  
+  ⭐ *Star my repositories if you find them useful!*
+</div>
 
 ---
 
-## 📜 Certifications
+## 📬 **Let's Build Together**
 
-- [Data Analytics Bootcamp – Codebasics](https://codebasics.io/bootcamps/data-analytics-bootcamp-with-practical-job-assistance)  
-- [ChatGPT Advanced Data Analysis (Ongoing) – Coursera](https://www.coursera.org/learn/chatgpt-advanced-data-analysis?specialization=prompt-engineering)
+> Whether you need a complex BI dashboard, an ETL pipeline, or just want to discuss data trends over coffee—I'm always open to meaningful conversations and impactful collaborations.
+
+**📍 Based in:** Chennai, India  
+**🕒 Timezone:** IST (UTC+5:30)  
+**💼 Available for:** Freelance Projects • Internships • Full-time Roles • Open Source Contributions
 
 ---
+
+<p align="center">
+ <!-- Contact & Immediate Reach -->
+<a href="mailto:ajithramesh2020@gmail.com">
+  <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
+</a>
+
+<a href="tel:+919345264522">
+  <img src="https://img.shields.io/badge/Call%20Me-0A66C2?style=for-the-badge&logo=phone&logoColor=white"/>
+</a>
+
+<a href="https://wa.me/9345264522">
+  <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/>
+</a>
+
+<!-- Professional Identity -->
+<a href="https://www.linkedin.com/in/ajith-ramesh-data-analyst/">
+  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
+
+<a href="https://ajith-data-analyst.github.io/Portfolio/Ajith_R_Resume.pdf">
+  <img src="https://img.shields.io/badge/Resume-4CAF50?style=for-the-badge&logo=googledrive&logoColor=white"/>
+</a>
+
+<!-- Work Proof -->
+<a href="https://ajith-data-analyst.github.io/Portfolio/home.html">
+  <img src="https://img.shields.io/badge/Portfolio-FF6B6B?style=for-the-badge&logo=web&logoColor=white"/>
+</a>
+
+<a href="https://github.com/Ajith-data-analyst">
+  <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+</p>
+<div align="center">
+
+  
+<a href="https://github.com/Ajith-data-analyst/Portfolio/blob/main/LICENSE">
+  © 2025 Ajith Ramesh · MIT License
+</a>
+
+</div>
+
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer"/>
+</p>
+
+
