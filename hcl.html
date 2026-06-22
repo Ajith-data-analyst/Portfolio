@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+
+    <title>AJITH RAMESH | Resume</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+         :root {
+            --bg: #ffffff;
+            --card: #ffffff;
+            --border: #e8e8e8;
+            --text: #111827;
+            --muted: #6b7280;
+            --primary: #111827;
+            --hover: #f7f7f7;
+            --shadow: 0 8px 25px rgba(0, 0, 0, .08);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+        
+        body {
+            height: 100dvh;
+        }
+        
+        .container {
+            width: 100%;
+            height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            padding: 8px;
+            gap: 8px;
+        }
+        /* TOP SECTION */
+        
+        .top-bar {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+        /* LEFT LINKS */
+        
+        .left-links {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+        }
+        
+        .left-links a {
+            text-decoration: none;
+            color: var(--text);
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 500;
+            transition: .25s;
+        }
+        
+        .left-links a:hover {
+            background: var(--hover);
+        }
+        /* RIGHT BUTTONS */
+        
+        .right-actions {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+        }
+        
+        .right-actions button {
+            border: none;
+            outline: none;
+            height: 42px;
+            border-radius: 10px;
+            background: var(--primary);
+            color: white;
+            font-size: 11px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: .25s;
+        }
+        
+        .right-actions button:hover {
+            opacity: .9;
+        }
+        /* NAME */
+        
+        .hero {
+            flex-shrink: 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: clamp(24px, 6vw, 48px);
+            font-weight: 800;
+            letter-spacing: 3px;
+            color: var(--text);
+            line-height: 1;
+        }
+        /* PDF CARD */
+        
+        .resume-card {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .viewer-header {
+            height: 44px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 14px;
+            border-bottom: 1px solid var(--border);
+            background: #fafafa;
+        }
+        
+        .viewer-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        
+        .viewer-title i {
+            color: #e63946;
+        }
+        
+        .status {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            color: #10b981;
+        }
+        
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #10b981;
+        }
+        
+        .pdf-viewer {
+            flex: 1;
+        }
+        
+        .pdf-viewer iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        /* TABLET */
+        
+        @media (min-width:768px) {
+            .container {
+                padding: 12px;
+            }
+            .top-bar {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .left-links {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .right-actions {
+                display: flex;
+            }
+            .left-links a {
+                min-width: 125px;
+                font-size: 13px;
+                padding: 0 12px;
+            }
+            .right-actions button {
+                min-width: 150px;
+                font-size: 13px;
+                padding: 0 16px;
+            }
+            .hero h1 {
+                font-size: 50px;
+            }
+            .viewer-title {
+                font-size: 14px;
+            }
+        }
+        /* LARGE DESKTOP */
+        
+        @media (min-width:1200px) {
+            .container {
+                max-width: 1800px;
+                margin: auto;
+            }
+            .hero h1 {
+                font-size: 60px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="hero">
+            <h1>AJITH RAMESH</h1>
+        </div>
+        <!-- TOP BAR -->
+
+        <div class="top-bar">
+
+            <!-- SOCIAL LINKS -->
+
+            <div class="left-links">
+
+                <a href="https://www.linkedin.com/in/ajith-ramesh-data-analyst/" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+
+                <a href="https://github.com/Ajith-data-analyst" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+
+                <a href="https://ajith-data-analyst.github.io/Portfolio/home.html" target="_blank">
+                    <i class="fas fa-globe"></i> Portfolio
+                </a>
+
+                <a href="mailto:ajithramesh2020@gmail.com">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+
+                <a href="tel:9345264522">
+                    <i class="fas fa-phone"></i> Phone
+                </a>
+
+                <a href="https://www.instagram.com/ajith_onl?igsh=MWV2M2Q2dmE2Y2JkeA==" target="_blank">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+
+            </div>
+
+            <!-- ACTIONS -->
+
+            <div class="right-actions">
+
+                <button onclick="downloadResume()">
+                <i class="fa-solid fa-download"></i>
+                Download
+            </button>
+
+                <button onclick="sharePDF()">
+                <i class="fa-solid fa-share"></i>
+                Share Link
+            </button>
+
+                <button onclick="shareLink()">
+                <i class="fa-solid fa-link"></i>
+                copy Link
+            </button>
+
+            </div>
+
+        </div>
+
+        <!-- NAME -->
+
+
+
+        <!-- PDF VIEWER -->
+
+        <div class="resume-card">
+
+            <div class="viewer-header">
+
+                <div class="viewer-title">
+                    <i class="fa-solid fa-file-pdf"></i> Resume Preview
+                </div>
+
+                <div class="status">
+                    <span class="dot"></span> Live
+                </div>
+
+            </div>
+
+            <div class="pdf-viewer">
+
+                <iframe src="HCL (1).pdf" title="Resume PDF Viewer">
+            </iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        const RESUME_FILE = "HCL (1).pdf";
+
+        /* DOWNLOAD */
+
+        function downloadResume() {
+
+            const a = document.createElement("a");
+
+            a.href = RESUME_FILE;
+            a.download = "AJITH_RAMESH_Resume.pdf";
+
+            document.body.appendChild(a);
+
+            a.click();
+
+            document.body.removeChild(a);
+        }
+
+        /* SHARE PDF */
+
+        async function sharePDF() {
+
+            if (navigator.share) {
+
+                try {
+
+                    await navigator.share({
+                        title: "AJITH RAMESH Resume",
+                        text: "Check out my resume",
+                        url: window.location.href
+                    });
+
+                } catch (error) {}
+            } else {
+                alert("Sharing is not supported on this device.");
+            }
+        }
+
+        /* SHARE LINK */
+
+        function shareLink() {
+
+            navigator.clipboard.writeText(window.location.href);
+
+            alert("Resume link copied to clipboard.");
+        }
+    </script>
+
+</body>
+
+</html>
